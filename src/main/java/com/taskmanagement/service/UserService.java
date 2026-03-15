@@ -1,0 +1,21 @@
+package com.taskmanagement.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.taskmanagement.entity.User;
+import com.taskmanagement.repository.UserRepository;
+
+@Service
+public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    public User registerUser(User user) {
+
+        return userRepository.save(user);
+
+    }
+
+}
