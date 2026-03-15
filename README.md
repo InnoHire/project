@@ -1,23 +1,14 @@
 # Task Management Project
 
-[![Java](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-green)](https://spring.io/projects/spring-boot)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This is a Task Management System built using **Java**, **Spring Boot**, **Maven**, **MySQL**, and tested using **Postman**. It allows admins to create and assign tasks, managers to assign tasks to users based on skills, track progress, and send completed tasks back to the admin. The Manager workflow follows this flow: Manager Login → Receive Task from Admin → Search User by Skills → Assign Task → Receive Completed Task from User → Send to Admin.  
 
-A Spring Boot application to manage tasks, users, and managers efficiently. This project allows creating, assigning, updating, and tracking tasks with role-based access.
-
----
-
-## Features
-
-- Create, update, and delete tasks
-- Assign tasks to users and managers
-- Track task progress and status
-- Role-based authentication and authorization (User / Manager)
-- Configuration via `application.properties`
-- Unit testing with JUnit
-
----
+## Technologies Used
+- Java 17and 17+
+- Spring Boot 3.x
+- Maven 3.8+
+- MySQL/PostgreSQL (for database)
+- Postman (API testing)
+- Git & GitHub (version control)
 
 ## Project Structure
 src/main/java/com/project/taskmanagement
@@ -27,39 +18,19 @@ src/main/java/com/project/taskmanagement
 └── repository # Database access layer
 
 src/main/resources
-├── application.properties # Spring Boot configuration
-
-
----
+└── application.properties # Spring Boot configuration
 
 ## Getting Started
 
 ### Prerequisites
+- Java 17 or above
+- Maven 3.8 or above
+- Git installed
+- Optional: MySQL/PostgreSQL database
 
-- Java 17+
-- Maven 3.8+
-- Git
-- Optional: MySQL/PostgreSQL for database persistence
-
-### Installation
-
-1. Clone the repository:
-
+### Installation & Running
+1. Clone the repository:  
 ```bash
 git clone https://github.com/InnoHire/project.git
 cd project
 git checkout manager
-mvn clean install
-mvn spring-boot:run
-API Endpoints
-Task Endpoints
-Method	Endpoint	Description
-GET	/tasks	List all tasks
-POST	/tasks	Create a new task
-PUT	/tasks/{id}	Update an existing task
-DELETE	/tasks/{id}	Delete a task
-Manager Endpoints
-Method	Endpoint	Description
-GET	/managers	List all managers
-POST	/managers	Add a new manager
-PUT	/managers/{id}	Update manager information
