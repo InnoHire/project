@@ -34,3 +34,47 @@ src/main/resources
 git clone https://github.com/InnoHire/project.git
 cd project
 git checkout manager
+Build the project:
+
+mvn clean install
+
+Run the Spring Boot application:
+
+mvn spring-boot:run
+
+The application runs at http://localhost:8080.
+
+API Endpoints
+
+Task Endpoints:
+
+GET /tasks – List all tasks
+
+POST /tasks – Create a new task
+
+PUT /tasks/{id} – Update a task
+
+DELETE /tasks/{id} – Delete a task
+
+Manager Endpoints:
+
+GET /managers – List all managers
+
+POST /managers – Add a manager
+
+PUT /managers/{id} – Update manager info
+
+Testing
+
+All APIs were tested using Postman. Each step in the Manager workflow is verified: login, receiving tasks from admin, searching users, assigning tasks, receiving completed tasks, and sending them to admin.
+
+Git Workflow
+
+Use Git to manage changes:
+
+git add .
+git commit -m "Your commit message"
+git push -u origin manager
+License
+
+MIT License
